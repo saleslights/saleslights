@@ -13,6 +13,10 @@ const nextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   images: { formats: ['image/webp'] },
+  async redirects() {
+    // Old static site served the homepage at /index.html too.
+    return [{ source: '/index.html', destination: '/', permanent: true }];
+  },
   async headers() {
     const headers = [...security];
     if (!isProduction) headers.push({ key: 'X-Robots-Tag', value: 'noindex, nofollow, noarchive' });

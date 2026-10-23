@@ -12,7 +12,7 @@ export const metadata = { alternates: { canonical: '/' } };
 export default function Home() {
   return (
     <>
-      <section className="hero">
+      <section className="hero" id="home">
         <div className="wrap hero-grid">
           <div>
             <p className="eyebrow">Saleslights · New York</p>
@@ -41,7 +41,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section white">
+      <section className="section white" id="services">
         <div className="wrap split">
           <div className="copy">
             <p className="eyebrow">The Master Revenue Engine</p>
@@ -70,7 +70,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section white">
+      <section className="section white" id="founder">
         <div className="wrap split top">
           <div className="copy">
             <p className="eyebrow">Founder-led</p>
@@ -84,7 +84,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" id="studio">
         <div className="wrap">
           <div className="split top">
             <div className="copy">
@@ -107,7 +107,7 @@ export default function Home() {
         </div>
       </section>
 
-      <Closing />
+      <div id="contact"><Closing /></div>
     </>
   );
 }
