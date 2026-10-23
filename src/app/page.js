@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import EngineDiagram from '../components/EngineDiagram';
 import TriadDiagram from '../components/TriadDiagram';
+import LampStudy from '../components/art/LampStudy';
 import Closing from '../components/Closing';
 import Subscribe from '../components/Subscribe';
 import { LADDER, RETAINER } from '../content/site';
@@ -18,7 +19,7 @@ export default function Home() {
             <p className="eyebrow">Saleslights · New York</p>
             <h1><span className="line">Revenue infrastructure.</span>{' '}<span className="line">Built and operated<span className="lamp-stop" aria-hidden="true"></span><span className="sr-only">.</span></span></h1>
           </div>
-          <div className="hero-art-slot" aria-hidden="true" />
+          <div className="hero-art-slot" aria-hidden="true"><LampStudy /></div>
           <div className="hero-copy">
             <p className="lede">We build the system that finds, reaches and wins your buyers — then run it with you, with a real sales professional in market.</p>
             <div className="actions">
