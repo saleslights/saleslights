@@ -44,7 +44,7 @@ export default async function Post({ params }) {
           <p className="eyebrow">The Saleslights letter</p>
           <p className="muted" style={{ marginTop: 12 }}>Get the next one in your inbox.</p>
           <Subscribe source={`post-${post.slug}`} />
-          <p style={{ marginTop: 40 }}><Link className="text-link" href="/book/">Talk it through with Nick · $250 / hour</Link></p>
+          <p style={{ marginTop: 40 }}><Link className="text-link" href="/book/">Talk it through with Nick</Link></p>
         </div>
       </article>
       <JsonLd data={{

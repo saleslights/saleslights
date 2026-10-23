@@ -18,8 +18,8 @@ export const PAGES = {
     h1: 'Sales and cold-call training',
   },
   '/book/': {
-    title: 'Book Time With Nick — one-hour GTM working session ($250)',
-    description: 'Pay $250 and book a one-hour working session with Saleslights founder Nick Krause on go-to-market strategy, revenue infrastructure, sales execution or AI growth systems.',
+    title: 'Book Time With Nick — one-hour GTM working session ($500)',
+    description: 'Pay $500 and book a one-hour working session with Saleslights founder Nick Krause on go-to-market strategy, revenue infrastructure, sales execution or AI growth systems.',
     h1: 'Book time with Nick',
   },
   '/about/': {

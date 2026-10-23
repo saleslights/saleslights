@@ -14,10 +14,14 @@ const text = (html) => html.replace(/<script[\s\S]*?<\/script>/g, '').replace(/<
 /* Copy contract: exact owner wording that must appear, and claims the truth canon does not support. */
 const MUST = {
   '/gtm-engine/': ['Saleslights - GTM Engine & Sales Professional', '$5,999–$13,999'],
-  '/book/': ['$250'],
+  '/book/': ['$500'],
   '/revenue-infrastructure/': ['$7.5K–$20K', '$50K–$100K+'],
 };
-const MUST_NOT = ['Annual managed infrastructure available', '~$8K', 'led sales engineering', 'guaranteed meetings'];
+const MUST_NOT = ['Annual managed infrastructure available', '~$8K', 'led sales engineering', 'guaranteed meetings', '$250'];
+/* Owner rule: the session price appears on /book/ only; every other booking CTA is unpriced. */
+const SESSION_PRICE = '$500';
+const SESSION_PRICE_ROUTE = '/book/';
+const sessionPriceSeenOn = [];
 
 const routes = [...Object.keys(PAGES).map((p) => [p, PAGES[p]]), ...POSTS.map((p) => [`/lab/${p.slug}/`, { h1: p.title, description: p.dek }])];
 for (const [route, spec] of routes) {
@@ -46,6 +50,10 @@ for (const [route, spec] of routes) {
   const visible = text(html);
   for (const t of MUST[route] || []) if (!visible.includes(t)) fail(route, `missing required copy "${t}"`);
   for (const t of MUST_NOT) if (visible.includes(t)) fail(route, `unsupported claim "${t}"`);
+  if (visible.includes(SESSION_PRICE)) sessionPriceSeenOn.push(route);
+}
+if (sessionPriceSeenOn.join() !== SESSION_PRICE_ROUTE) {
+  fail(SESSION_PRICE_ROUTE, `session price ${SESSION_PRICE} must appear on ${SESSION_PRICE_ROUTE} only, saw: ${sessionPriceSeenOn.join(', ') || 'nowhere'}`);
 }
 const robots = await (await fetch(BASE + '/robots.txt')).text();
 const sitemap = await (await fetch(BASE + '/sitemap.xml')).text();

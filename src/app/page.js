@@ -5,7 +5,7 @@ import TriadDiagram from '../components/TriadDiagram';
 import LampStudy from '../components/art/LampStudy';
 import Closing from '../components/Closing';
 import Subscribe from '../components/Subscribe';
-import { LADDER, RETAINER } from '../content/site';
+import { BOOK, LADDER, RETAINER } from '../content/site';
 import { POSTS } from '../content/posts';
 
 export const metadata = { alternates: { canonical: '/' } };
@@ -23,7 +23,7 @@ export default function Home() {
           <div className="hero-copy">
             <p className="lede">We build the system that finds, reaches and wins your buyers — then run it with you, with a real sales professional in market.</p>
             <div className="actions">
-              <Link className="button" href="/book/">Book time with Nick · $250</Link>
+              <Link className="button" href="/book/">{BOOK.cta}</Link>
               <Link className="text-link" href="/gtm-engine/">See the GTM Engine</Link>
             </div>
           </div>
