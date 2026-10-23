@@ -11,6 +11,14 @@ const failures = [];
 const fail = (route, msg) => failures.push(`${route}: ${msg}`);
 const text = (html) => html.replace(/<script[\s\S]*?<\/script>/g, '').replace(/<style[\s\S]*?<\/style>/g, '').replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&#x27;|&#39;/g, "'").replace(/&quot;/g, '"').replace(/\s+/g, ' ').trim();
 
+/* Copy contract: exact owner wording that must appear, and claims the truth canon does not support. */
+const MUST = {
+  '/gtm-engine/': ['Saleslights - GTM Engine & Sales Professional', '$5,999–$13,999'],
+  '/book/': ['$250'],
+  '/revenue-infrastructure/': ['$7.5K–$20K', '$50K–$100K+'],
+};
+const MUST_NOT = ['Annual managed infrastructure available', '~$8K', 'led sales engineering', 'guaranteed meetings'];
+
 const routes = [...Object.keys(PAGES).map((p) => [p, PAGES[p]]), ...POSTS.map((p) => [`/lab/${p.slug}/`, { h1: p.title, description: p.dek }])];
 for (const [route, spec] of routes) {
   const res = await fetch(BASE + route, { redirect: 'manual' });
@@ -35,6 +43,9 @@ for (const [route, spec] of routes) {
   if (ENV === 'staging') { if (!/noindex/.test(robotsMeta) || !/noindex/.test(xr)) fail(route, 'staging must be noindex (meta + header)'); }
   else if (/noindex/.test(robotsMeta + xr)) fail(route, 'production page is noindex');
   if (/\\u[0-9a-fA-F]{4}|\uFFFD/.test(text(html))) fail(route, 'escaped/mojibake text in visible copy');
+  const visible = text(html);
+  for (const t of MUST[route] || []) if (!visible.includes(t)) fail(route, `missing required copy "${t}"`);
+  for (const t of MUST_NOT) if (visible.includes(t)) fail(route, `unsupported claim "${t}"`);
 }
 const robots = await (await fetch(BASE + '/robots.txt')).text();
 const sitemap = await (await fetch(BASE + '/sitemap.xml')).text();

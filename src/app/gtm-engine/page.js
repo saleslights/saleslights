@@ -9,7 +9,7 @@ import { absolute } from '../../lib/env';
 export const metadata = pageMeta('/gtm-engine/');
 
 const FAQ = [
-  ['How much does the GTM Engine & Sales Professional cost?', 'Between $5,999 and $13,999 per month, depending on company size, markets and scope. Larger programs can cost more. Pricing is agreed before any work starts.'],
+  ['How much does Saleslights - GTM Engine & Sales Professional cost?', 'Between $5,999 and $13,999 per month, depending on company size, markets and scope. Larger programs can cost more. Pricing is agreed before any work starts.'],
   ['Is the sales professional a real person?', 'Yes. Each program includes a dedicated, U.S.-based sales professional who makes calls, works LinkedIn, attends events and books meetings, alongside Nick as sales engineering lead. AI does the research and orchestration; people sell.'],
   ['Do you guarantee meetings or revenue?', 'No. We commit to the work, the cadence and weekly reporting, and to tuning the system every week. Anyone guaranteeing revenue from outbound is pricing in a promise they cannot control.'],
   ['Who owns the data and systems?', 'You do. We work inside your CRM and tools where possible, and the platforms, data, prospect intelligence and deliverables built for you remain yours.'],

@@ -1,7 +1,7 @@
 /* Per-route SEO contract. scripts/verify-routes.mjs asserts rendered HTML
    against this table: status, one H1, title, description and canonical. */
 export const PAGES = {
-  '/': { title: 'Saleslights — Revenue infrastructure, operated', h1: 'Revenue infrastructure, operated.' },
+  '/': { title: 'Saleslights — Revenue infrastructure, built and operated', h1: 'Revenue infrastructure. Built and operated.' },
   '/gtm-engine/': {
     title: 'GTM Engine & Sales Professional — managed GTM with a rep in market',
     description: 'Saleslights runs your full GTM engine and puts a dedicated U.S.-based sales professional in market alongside founder Nick Krause. $5,999–$13,999 per month by company size.',
@@ -9,7 +9,7 @@ export const PAGES = {
   },
   '/revenue-infrastructure/': {
     title: 'Revenue Infrastructure — the Master Revenue Engine, implemented',
-    description: 'The ten domains Saleslights implements and operates — signals, prospecting, campaigns, search, CX, paid, analytics, content, field and finance — with SMB, midmarket and enterprise pricing.',
+    description: 'The Master Revenue Engine architecture Saleslights implements — signals, prospecting, campaigns, search, CX, paid, analytics, content, field and finance — with SMB, midmarket and enterprise pricing.',
     h1: 'Revenue infrastructure',
   },
   '/training/': {
