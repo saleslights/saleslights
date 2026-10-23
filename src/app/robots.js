@@ -7,7 +7,7 @@ export default function robots() {
   return {
     rules: [
       { userAgent: '*', allow: '/', disallow: ['/api/'] },
-      { userAgent: ['GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'PerplexityBot', 'Google-Extended', 'Bingbot'], allow: '/' },
+      { userAgent: ['GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'PerplexityBot', 'Google-Extended', 'Bingbot'], allow: '/', disallow: ['/api/'] },
     ],
     sitemap: `${CANONICAL_ORIGIN}/sitemap.xml`,
     host: CANONICAL_ORIGIN,
