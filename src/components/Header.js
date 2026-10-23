@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Mark from './Mark';
 import MobileMenu from './MobileMenu';
-import { NAV } from '../content/site';
+import { BOOK, NAV } from '../content/site';
 
 function Links() {
   return (
@@ -9,7 +9,7 @@ function Links() {
       {NAV.map((item) => (
         <li key={item.href}><Link href={item.href}>{item.label}</Link></li>
       ))}
-      <li className="nav-cta"><Link href="/book/">Book Nick · $250</Link></li>
+      <li className="nav-cta"><Link href="/book/">{BOOK.cta}</Link></li>
     </ul>
   );
 }

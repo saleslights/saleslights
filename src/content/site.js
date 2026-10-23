@@ -1,6 +1,7 @@
 /* Single source of truth for public copy, prices and offers.
    Every price below traces to research/truth/pricing-evidence.json:
-   - $250 session: live Stripe product (verified 2026-10-23).
+   - $500 session: live Stripe product (repriced from $250, verified 2026-10-23).
+   The session price is shown on /book/ only; every other call to action is unpriced.
    - Retainer range: Nick's instruction, 2026-10-23.
    - Implementation ranges: Saleslights master brand & offer architecture (owner targets).
    - Per-tier ongoing support: positions within the owner's retainer range; no sub-bands invented. */
@@ -10,8 +11,8 @@ export const SITE_NAME = 'Saleslights';
 import { IS_PRODUCTION } from '../lib/env';
 
 export const LINKS = {
-  bookCheckout: 'https://buy.stripe.com/9B6eVefjlfZQcZw7OHcZa01',
-  bookCheckoutTest: 'https://buy.stripe.com/test_3cI8wQ9Z19Bs1gO5GzcZa00',
+  bookCheckout: 'https://buy.stripe.com/3cIdRa8UXcNE6B85GzcZa02',
+  bookCheckoutTest: 'https://buy.stripe.com/test_9B6eVefjlfZQcZw7OHcZa01',
   calendarAfterPayment: 'https://calendly.com/nkrause-tvw8/book-time-with-nick',
   introCall: 'https://calendly.com/nkrause-tvw8/saleslights-nick-30-min',
   linkedin: 'https://www.linkedin.com/in/nicholas-krause',
@@ -33,7 +34,9 @@ export const NAV = [
 export const BOOK = {
   name: 'Book Time With Nick',
   duration: '1 hour',
-  price: '$250',
+  price: '$500',
+  /* Shown on /book/ only. Keep every other booking CTA unpriced. */
+  cta: 'Book time with Nick',
   summary:
     'A focused working session with Nick Krause on go-to-market strategy, revenue infrastructure, sales execution or AI-enabled growth systems.',
   steps: [
@@ -146,7 +149,7 @@ export const TRIAD = [
 ];
 
 export const LADDER = [
-  ['Book an hour', '$250', '/book/'],
+  ['Book an hour', 'Working session', '/book/'],
   ['Implement the system', 'from $7.5K', '/revenue-infrastructure/'],
   ['Run it with us', 'from $5,999 / mo', '/gtm-engine/'],
 ];

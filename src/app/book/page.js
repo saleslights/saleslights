@@ -35,7 +35,7 @@ export default function Book() {
       <Closing title="Need more than an hour?" text="Programs, builds and training are scoped separately. Tell us what you are working on." contactFirst />
       <JsonLd data={{
         '@type': 'Product', name: `${BOOK.name} (1-Hr)`, description: BOOK.summary, brand: { '@id': ORG_ID }, url: absolute('/book/'),
-        offers: { '@type': 'Offer', price: '250.00', priceCurrency: 'USD', availability: 'https://schema.org/InStock', url: absolute('/book/'), seller: { '@id': ORG_ID } },
+        offers: { '@type': 'Offer', price: '500.00', priceCurrency: 'USD', availability: 'https://schema.org/InStock', url: absolute('/book/'), seller: { '@id': ORG_ID } },
         isRelatedTo: { '@id': PERSON_ID },
       }} />
     </>
