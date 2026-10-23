@@ -70,10 +70,10 @@ ul { margin: 0; padding: 0; list-style: none; }
 .menu nav a { text-decoration: none; display: block; padding: 13px 0; font-size: 25px; line-height: 1.3; letter-spacing: -.035em; border-bottom: 1px solid var(--line); }
 .menu .nav-cta a { margin-top: 12px; border: 0; font-size: 18px; }
 .nav-cta a { font-weight: 500; }
-@media (min-width: 1080px) {
+@media (min-width: 1280px) {
   .menu { display: none; }
   .nav-desktop { display: block; }
-  .nav-desktop ul { display: flex; align-items: center; gap: clamp(18px, 2vw, 30px); }
+  .nav-desktop ul { display: flex; align-items: center; gap: clamp(12px, 1.25vw, 20px); }
   .nav-desktop a { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; text-decoration: none; color: var(--ink-2); position: relative; }
   .nav-desktop a::after { content: ''; position: absolute; bottom: 6px; left: 0; width: 100%; height: 2px; background: var(--lamp-deep); transform: scaleX(0); transform-origin: left; transition: transform .2s var(--ease); }
   .nav-desktop a:hover::after, .nav-desktop a:focus-visible::after { transform: scaleX(1); }

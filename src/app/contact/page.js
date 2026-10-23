@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export const metadata = pageMeta('/contact/');
 
-const TOPICS = ['gtm-engine', 'revenue-infrastructure', 'training', 'lead-data', 'speaking', 'other'];
+import { CONTACT_TOPIC_VALUES as TOPICS } from '../../content/contact-topics';
 
 export default async function Contact({ searchParams }) {
   const sp = (await searchParams) || {};

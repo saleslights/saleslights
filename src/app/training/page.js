@@ -20,8 +20,8 @@ export default function Training() {
     <>
       <section className="page-head editorial-head">
         <div className="wrap">
-          <p className="eyebrow">Training</p>
-          <h1>Sales and cold-call training</h1>
+          <p className="eyebrow">Sales Training</p>
+          <h1>Sales Training</h1>
           <p className="lede">Your team picks up the phone more confidently, opens better and handles the objections it hears every day. Taught by a founder who still sells.</p>
           <div className="actions">
             <Link className="button" href="/contact/?topic=training">Plan a training</Link>
