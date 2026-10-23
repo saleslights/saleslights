@@ -6,12 +6,20 @@ name: Deploy
 # deploy, because that script is what owns the build, the atomic swap and the
 # rollback, and two copies of that logic would drift.
 
+# NOTE (2026-10-23): automatic deploy on push to main is DISABLED.
+# This workflow ran /root/deploy-saleslights-site.sh on the old host (2.25.162.218),
+# which builds a Next.js *static export*. The site is now a Next.js server app hosted
+# on KVM 2 behind Apache + PM2 (saleslights-prod, 127.0.0.1:3010), so that script has
+# nothing to swap and would fail on every push. Production is released with
+# `ops/run_deploy.py production <sha>` from the private ops workspace, which builds a
+# candidate, runs the route gate against it, swaps the release symlink and rolls back
+# on an unhealthy health check.
+#
+# Re-enable only after this workflow is retargeted at KVM 2 and the VPS_* secrets are
+# repointed; until then workflow_dispatch is kept so the OLD host can still be rebuilt
+# deliberately if a rollback ever needs it.
+
 on:
-  push:
-    branches: [main]
-    paths-ignore:
-      - '**.md'
-      - 'LICENSE'
   workflow_dispatch:
     inputs:
       sha:
