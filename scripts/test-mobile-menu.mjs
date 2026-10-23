@@ -50,7 +50,7 @@ try {
   const point = await ev(`(() => { const a=document.querySelector('details.menu a[href="/training/"]'); const r=a.getBoundingClientRect(); return {x:r.x+r.width/2,y:r.y+r.height/2}; })()`);
   await send('Input.dispatchMouseEvent', { type: 'mousePressed', ...point, button: 'left', clickCount: 1 }, s);
   await send('Input.dispatchMouseEvent', { type: 'mouseReleased', ...point, button: 'left', clickCount: 1 }, s);
-  await until(`location.pathname === '/training/' && document.querySelector('h1')?.textContent === 'Sales and cold-call training'`);
+  await until(`location.pathname === '/training/' && document.querySelector('h1')?.textContent === 'Sales Training'`);
   console.log('PASS visible mobile link reaches training');
   assert.equal(await ev(`document.querySelector('details.menu').open`), false, 'Mobile menu must close after client navigation');
   console.log('PASS menu closes after navigation');

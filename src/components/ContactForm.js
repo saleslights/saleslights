@@ -1,14 +1,7 @@
 'use client';
 import { useState } from 'react';
 
-const TOPICS = [
-  ['gtm-engine', 'GTM Engine & Sales Professional (retainer)'],
-  ['revenue-infrastructure', 'Revenue infrastructure implementation'],
-  ['training', 'Sales or cold-call training'],
-  ['lead-data', 'Enriched lead data'],
-  ['speaking', 'Speaking or workshop'],
-  ['other', 'Something else'],
-];
+import { CONTACT_TOPICS as TOPICS } from '../content/contact-topics';
 const SIZES = ['1–10', '11–50', '51–200', '201–1,000', '1,000+'];
 
 export default function ContactForm({ defaultTopic = '' }) {

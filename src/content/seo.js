@@ -15,7 +15,17 @@ export const PAGES = {
   '/training/': {
     title: 'Sales & Cold Call Training for B2B Teams',
     description: 'Cold call and objection training, sales team performance coaching and enterprise enablement, run by Saleslights founder Nick Krause against your real calls.',
-    h1: 'Sales and cold-call training',
+    h1: 'Sales Training',
+  },
+  '/ai-training/': {
+    title: 'Practical AI Training for Business Teams | Saleslights',
+    description: 'Practical AI training for sales, operations, finance and security teams. Build useful workflows, review outputs and measure adoption with Saleslights.',
+    h1: 'AI training. For the work that matters.',
+  },
+  '/software-development/': {
+    title: 'Custom Software Development & FDE | Saleslights',
+    description: 'Build and improve revenue-focused software with Nick as your forward-deployed engineer and a full-stack engineer. Clear scope, ownership and security controls.',
+    h1: 'Software development. Built for growth.',
   },
   '/book/': {
     title: 'Book Time With Nick — one-hour GTM working session ($500)',

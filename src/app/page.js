@@ -5,6 +5,7 @@ import TriadDiagram from '../components/TriadDiagram';
 import LampStudy from '../components/art/LampStudy';
 import Closing from '../components/Closing';
 import Subscribe from '../components/Subscribe';
+import ServiceOverview from '../components/ServiceOverview';
 import { BOOK, LADDER, RETAINER } from '../content/site';
 import { POSTS } from '../content/posts';
 
@@ -73,6 +74,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <ServiceOverview />
 
       <section className="section white home-founder" id="founder">
         <div className="wrap split top">
