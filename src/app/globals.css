@@ -93,9 +93,16 @@ ul { margin: 0; padding: 0; list-style: none; }
 .hero { padding: clamp(72px, 12vw, 170px) 0 clamp(60px, 9vw, 120px); position: relative; overflow: hidden; }
 .hero-grid { display: grid; gap: 56px; }
 .hero h1 { max-width: 11ch; }
+.hero h1 .line { display: inline; }
 .hero h1 .lamp-stop { display: inline-block; width: 0.15em; height: 0.15em; margin-left: 0.04em; border-radius: 50%; background: var(--lamp); box-shadow: inset 0 0 0 1.5px var(--lamp-deep), 0 0 0.35em 0.06em rgba(244, 237, 166, .7); vertical-align: baseline; }
 .hero .lede { margin-top: 36px; }
-@media (min-width: 980px) { .hero-grid { grid-template-columns: 1.35fr 1fr; align-items: end; } }
+@media (min-width: 980px) {
+  .hero-grid { grid-template-columns: 1fr 1fr; align-items: end; row-gap: 8px; }
+  .hero-grid > div:first-child { grid-column: 1 / -1; }
+  .hero-grid > div:last-child { grid-column: 2; }
+  .hero h1 { max-width: none; font-size: clamp(64px, 7.6vw, 112px); }
+  .hero h1 .line { display: block; }
+}
 
 /* Ladder */
 .ladder { display: grid; border-top: 1px solid var(--line); }

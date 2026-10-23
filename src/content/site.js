@@ -3,7 +3,7 @@
    - $250 session: live Stripe product (verified 2026-10-23).
    - Retainer range: Nick's instruction, 2026-10-23.
    - Implementation ranges: Saleslights master brand & offer architecture (owner targets).
-   - Per-tier ongoing support: estimates derived from the retainer range, labelled as such. */
+   - Per-tier ongoing support: positions within the owner's retainer range; no sub-bands invented. */
 
 export const SITE_NAME = 'Saleslights';
 
@@ -50,7 +50,7 @@ export const BOOK = {
 };
 
 export const RETAINER = {
-  name: 'Saleslights — GTM Engine & Sales Professional',
+  name: 'Saleslights - GTM Engine & Sales Professional',
   priceRange: '$5,999–$13,999',
   cadence: 'per month',
   priceNote: 'Depends on company size, markets and scope. Larger programs can be more.',
@@ -77,7 +77,7 @@ export const TIERS = [
     who: 'Founder-led teams, first sellers, one core motion.',
     implementation: '$7.5K–$20K',
     implementationNote: 'Focused builds: ICP & data, outbound system or sales training.',
-    support: 'from $5,999 / mo',
+    support: 'from $5,999',
     supportNote: 'Ongoing operation through the GTM Engine retainer.',
   },
   {
@@ -86,8 +86,8 @@ export const TIERS = [
     who: 'Multiple segments or sellers, a CRM that needs to become a system.',
     implementation: '$15K–$35K+',
     implementationNote: 'GTM strategy & implementation, or an AI RevOps & automation build.',
-    support: '~$8K–$11K / mo',
-    supportNote: 'Estimate. Managed engine plus in-market representation.',
+    support: '$5,999–$13,999',
+    supportNote: 'Set by scope within the GTM Engine range.',
   },
   {
     id: 'enterprise',
@@ -95,8 +95,8 @@ export const TIERS = [
     who: 'Business units, geographies, buying committees, governance.',
     implementation: '$50K–$100K+',
     implementationNote: 'Transformation-scale programs with security, procurement and change management.',
-    support: 'from $13,999 / mo',
-    supportNote: 'Scoped individually. Annual managed infrastructure available.',
+    support: 'from $13,999',
+    supportNote: 'Scoped individually; larger programs can be more.',
   },
 ];
 
@@ -118,7 +118,7 @@ export const LOOP = [
   ['Engineer', 'ICPs, segments, triggers and the buying committee.'],
   ['Create authority', 'Founder-led content, proof and premium assets.'],
   ['Activate', 'Phone, email, LinkedIn, field and partner motions.'],
-  ['Learn', 'Report, refine and redeploy into next week.'],
+  ['Learn', 'What buyers say on calls feeds next week’s targeting, messaging and workflows.'],
 ];
 
 export const TRAINING = [

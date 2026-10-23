@@ -10,7 +10,7 @@ const DESCRIPTION =
 
 export const metadata = {
   metadataBase: new URL(CANONICAL_ORIGIN),
-  title: { default: 'Saleslights — Revenue infrastructure, operated', template: '%s | Saleslights' },
+  title: { default: 'Saleslights — Revenue infrastructure, built and operated', template: '%s | Saleslights' },
   description: DESCRIPTION,
   applicationName: 'Saleslights',
   authors: [{ name: 'Nick Krause', url: `${CANONICAL_ORIGIN}/about/` }],
@@ -26,7 +26,7 @@ export const metadata = {
     type: 'website',
     siteName: 'Saleslights',
     url: CANONICAL_ORIGIN,
-    title: 'Saleslights — Revenue infrastructure, operated',
+    title: 'Saleslights — Revenue infrastructure, built and operated',
     description: DESCRIPTION,
     locale: 'en_US',
     images: [{ url: '/brand/og-default-1200x630.png', width: 1200, height: 630, alt: 'Saleslights' }],

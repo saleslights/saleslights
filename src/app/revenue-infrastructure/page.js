@@ -42,7 +42,7 @@ export default function RevenueInfrastructure() {
 
       <section className="section">
         <div className="wrap">
-          <p className="eyebrow">What we implement and run</p>
+          <p className="eyebrow">The architecture we implement</p>
           <div className="domains" style={{ marginTop: 32 }}>
             {DOMAINS.map((d, i) => (
               <div className="domain" key={d.key} id={d.key}>
@@ -53,7 +53,7 @@ export default function RevenueInfrastructure() {
               </div>
             ))}
           </div>
-          <p className="footnote">Every engagement is scoped to the domains you need. Most start with three or four and add the rest as the engine earns its keep.</p>
+          <p className="footnote">Every engagement is scoped to the domains you need. Start with the three or four that matter most; the written scope says exactly what each one delivers.</p>
         </div>
       </section>
 
@@ -68,11 +68,11 @@ export default function RevenueInfrastructure() {
                 <p className="who">{t.who}</p>
                 <div className="divider" />
                 <div><p className="label">Implementation</p><p className="amt">{t.implementation}</p><p className="note">{t.implementationNote}</p></div>
-                <div><p className="label">Ongoing support</p><p className="amt">{t.support}</p><p className="note">{t.supportNote}</p></div>
+                <div><p className="label">Ongoing support · per month</p><p className="amt">{t.support}</p><p className="note">{t.supportNote}</p></div>
               </div>
             ))}
           </div>
-          <p className="footnote">Estimates in U.S. dollars. A written scope and fixed price follow discovery. Implementations are finite projects with deliverables and a finish line; ongoing support is optional and is delivered through the <Link href="/gtm-engine/">GTM Engine &amp; Sales Professional</Link> program.</p>
+          <p className="footnote">Estimates in U.S. dollars. A written scope and fixed price follow discovery. Implementations are finite projects with deliverables and a finish line, and you keep everything built. Ongoing operation is optional: the <Link href="/gtm-engine/">GTM Engine &amp; Sales Professional</Link> program, or a lighter support scope agreed separately.</p>
         </div>
       </section>
 

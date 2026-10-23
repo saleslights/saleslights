@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="wrap footer-grid">
         <div className="footer-brand">
           <Mark size={44} />
-          <p className="footer-line">Revenue infrastructure, operated.</p>
+          <p className="footer-line">Revenue infrastructure. Built and operated.</p>
           <p className="muted small">New York · Delaware</p>
         </div>
         <div>

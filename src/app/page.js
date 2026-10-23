@@ -16,7 +16,7 @@ export default function Home() {
         <div className="wrap hero-grid">
           <div>
             <p className="eyebrow">Saleslights · New York</p>
-            <h1 style={{ marginTop: 28 }}>Revenue infrastructure, operated<span className="lamp-stop" aria-hidden="true"></span><span className="sr-only">.</span></h1>
+            <h1 style={{ marginTop: 28 }}><span className="line">Revenue infrastructure.</span>{' '}<span className="line">Built and operated<span className="lamp-stop" aria-hidden="true"></span><span className="sr-only">.</span></span></h1>
           </div>
           <div>
             <p className="lede">We build the system that finds, reaches and wins your buyers — then run it with you, with a real sales professional in market.</p>
@@ -57,7 +57,7 @@ export default function Home() {
         <div className="wrap split">
           <div className="copy">
             <p className="eyebrow">Our core offer</p>
-            <h2>{RETAINER.name.replace('Saleslights — ', '')}</h2>
+            <h2>{RETAINER.name.replace('Saleslights - ', '')}</h2>
             <p className="lede">{RETAINER.promise}</p>
             <p className="price" style={{ fontSize: 'clamp(40px,5vw,72px)' }}>{RETAINER.priceRange}<small>{RETAINER.cadence}</small></p>
             <p className="muted">{RETAINER.priceNote}</p>
@@ -75,7 +75,7 @@ export default function Home() {
           <div className="copy">
             <p className="eyebrow">Founder-led</p>
             <h2>Senior judgment on every account.</h2>
-            <p className="lede">Nick Krause has carried quota, led sales engineering and founded Sherpa, a compliance company whose assets AdRem Systems acquired. He is in the work, not above it.</p>
+            <p className="lede">Nick Krause has carried quota, worked in senior sales engineering and founded Sherpa, a compliance company whose assets AdRem Systems acquired. He is in the work, not above it.</p>
             <p><Link className="text-link" href="/about/">About Nick and the team</Link></p>
           </div>
           <div>
