@@ -10,7 +10,7 @@ export const metadata = pageMeta('/lab/');
 export default function Lab() {
   return (
     <>
-      <section className="page-head">
+      <section className="page-head lab-head">
         <div className="wrap split top">
           <div className="copy">
             <p className="eyebrow">Saleslights · AI Lab</p>

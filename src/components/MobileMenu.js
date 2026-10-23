@@ -7,6 +7,11 @@ export default function MobileMenu({ children }) {
   return (
     <details className="menu" onClick={(event) => {
       if (event.target.closest('a[href]')) event.currentTarget.open = false;
+    }} onKeyDown={(event) => {
+      if (event.key === 'Escape' && event.currentTarget.open) {
+        event.currentTarget.open = false;
+        event.currentTarget.querySelector('summary')?.focus();
+      }
     }}>
       <summary>Menu</summary>
       {children}

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import EngineDiagram from '../components/EngineDiagram';
 import TriadDiagram from '../components/TriadDiagram';
+import LampStudy from '../components/art/LampStudy';
 import Closing from '../components/Closing';
 import Subscribe from '../components/Subscribe';
 import { LADDER, RETAINER } from '../content/site';
@@ -14,11 +15,12 @@ export default function Home() {
     <>
       <section className="hero" id="home">
         <div className="wrap hero-grid">
-          <div>
+          <div className="hero-title">
             <p className="eyebrow">Saleslights · New York</p>
-            <h1 style={{ marginTop: 28 }}><span className="line">Revenue infrastructure.</span>{' '}<span className="line">Built and operated<span className="lamp-stop" aria-hidden="true"></span><span className="sr-only">.</span></span></h1>
+            <h1><span className="line">Revenue infrastructure.</span>{' '}<span className="line">Built and operated<span className="lamp-stop" aria-hidden="true"></span><span className="sr-only">.</span></span></h1>
           </div>
-          <div>
+          <div className="hero-art-slot" aria-hidden="true"><LampStudy /></div>
+          <div className="hero-copy">
             <p className="lede">We build the system that finds, reaches and wins your buyers — then run it with you, with a real sales professional in market.</p>
             <div className="actions">
               <Link className="button" href="/book/">Book time with Nick · $250</Link>
@@ -30,13 +32,15 @@ export default function Home() {
 
       <section className="section tight">
         <div className="wrap">
-          <p className="eyebrow">Three ways in</p>
-          <div className="ladder" style={{ marginTop: 32 }}>
-            {LADDER.map(([t, p, href], i) => (
-              <Link key={href} href={href}>
-                <span className="n">0{i + 1}</span><span className="t">{t}</span><span className="p">{p}</span>
-              </Link>
-            ))}
+          <div className="entry-index">
+            <p className="eyebrow">Three ways in</p>
+            <div className="ladder">
+              {LADDER.map(([t, p, href], i) => (
+                <Link key={href} href={href}>
+                  <span className="n">0{i + 1}</span><span className="t">{t}</span><span className="p">{p}</span>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -53,24 +57,24 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section home-offer">
         <div className="wrap split">
           <div className="copy">
             <p className="eyebrow">Our core offer</p>
             <h2>{RETAINER.name.replace('Saleslights - ', '')}</h2>
             <p className="lede">{RETAINER.promise}</p>
-            <p className="price" style={{ fontSize: 'clamp(40px,5vw,72px)' }}>{RETAINER.priceRange}<small>{RETAINER.cadence}</small></p>
+            <p className="price">{RETAINER.priceRange}<small>{RETAINER.cadence}</small></p>
             <p className="muted">{RETAINER.priceNote}</p>
             <p><Link className="text-link" href="/gtm-engine/">What is included</Link></p>
           </div>
           <div className="copy">
             <TriadDiagram />
-            <p className="muted" style={{ textAlign: 'center' }}>Nick, the platform and the delivery team — working on your account at the same time.</p>
+            <p className="muted diagram-caption">Nick, the platform and the delivery team — working on your account at the same time.</p>
           </div>
         </div>
       </section>
 
-      <section className="section white" id="founder">
+      <section className="section white home-founder" id="founder">
         <div className="wrap split top">
           <div className="copy">
             <p className="eyebrow">Founder-led</p>

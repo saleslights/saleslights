@@ -20,7 +20,7 @@ const BUILDS = [
 export default function RevenueInfrastructure() {
   return (
     <>
-      <section className="page-head">
+      <section className="page-head editorial-head">
         <div className="wrap">
           <p className="eyebrow">The Master Revenue Engine</p>
           <h1>Revenue infrastructure</h1>

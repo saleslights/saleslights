@@ -6,11 +6,13 @@ export default function Closing({ title = 'Start with an hour.', text = 'One pai
     <section className="closing">
       <div className="wrap closing-inner">
         <h2>{title}</h2>
-        <p className="lede">{text}</p>
-        <div className="actions">
-          {contactFirst
-            ? <Link className="button" href="/contact/">Tell us about the project</Link>
-            : <><Link className="button" href="/book/">Book time with Nick · $250</Link><Link className="text-link" href="/contact/">Or tell us about the project →</Link></>}
+        <div className="closing-copy">
+          <p className="lede">{text}</p>
+          <div className="actions">
+            {contactFirst
+              ? <Link className="button" href="/contact/">Tell us about the project</Link>
+              : <><Link className="button" href="/book/">Book time with Nick · $250</Link><Link className="text-link" href="/contact/">Or tell us about the project →</Link></>}
+          </div>
         </div>
       </div>
     </section>

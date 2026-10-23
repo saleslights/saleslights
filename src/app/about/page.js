@@ -14,7 +14,7 @@ const DISCIPLINES = ['Go-to-market engineering', 'Revenue systems', 'Intent and 
 export default function About() {
   return (
     <>
-      <section className="page-head">
+      <section className="page-head about-head">
         <div className="wrap split top">
           <div className="copy">
             <p className="eyebrow">About</p>
@@ -39,7 +39,7 @@ export default function About() {
             <p>His career runs through senior sales engineering and quota-carrying roles — leading opportunity meetings with deep technical expertise while account teams managed the stakeholders. He founded Sherpa to help government contractors navigate cybersecurity compliance; a February 2024 announcement reported AdRem Systems’ acquisition of Sherpa assets and named Nick as Sherpa’s former CEO and founder of Saleslights.</p>
             <p>Today he leads Saleslights from New York: GTM strategy and sales engineering for clients, in-market representation, and the agentic engineering behind the Saleslights platform, which also runs go-to-market for portfolio companies including FindUrLawyer, VideoFunker and InfernoBlue.</p>
             <p>He works in English, Spanish and Portuguese.</p>
-            <ul className="domain" style={{ border: 0, padding: 0, display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+            <ul className="disciplines">
               {DISCIPLINES.map((d) => <li key={d}>{d}</li>)}
             </ul>
             <p><a className="text-link" href={LINKS.sherpaAcquisition} rel="noopener">Read the acquisition announcement</a> · <a className="text-link" href={LINKS.linkedin} rel="noopener">LinkedIn</a></p>
@@ -47,7 +47,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="section ink">
+      <section className="section soft">
         <div className="wrap split">
           <div className="copy">
             <p className="eyebrow">How the work is done</p>
@@ -56,7 +56,7 @@ export default function About() {
               {TRIAD.map(([h, p]) => <div key={h}><h3>{h}</h3><p className="muted" style={{ marginTop: 6 }}>{p}</p></div>)}
             </div>
           </div>
-          <div style={{ color: 'var(--paper)' }}><TriadDiagram /></div>
+          <div><TriadDiagram /></div>
         </div>
       </section>
 

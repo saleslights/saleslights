@@ -18,7 +18,7 @@ const METHOD = [
 export default function Training() {
   return (
     <>
-      <section className="page-head">
+      <section className="page-head editorial-head">
         <div className="wrap">
           <p className="eyebrow">Training</p>
           <h1>Sales and cold-call training</h1>
