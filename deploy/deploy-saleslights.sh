@@ -10,7 +10,7 @@ TIER=${1:?staging|production required}
 EXPECTED_SHA=${2:?expected commit SHA required}
 [[ "$EXPECTED_SHA" =~ ^[0-9a-f]{40}$ ]] || { echo INVALID_SHA; exit 2; }
 case "$TIER" in
-  staging)    ROOT=/var/www/saleslights-staging; APP=saleslights-staging; PORT=3011; CANDIDATE_PORT=3013; REF=${DEPLOY_REF:-staging}; ORIGIN=https://staging.saleslights.com ;;
+  staging)    ROOT=/var/www/saleslights-staging; APP=saleslights-staging; PORT=3011; CANDIDATE_PORT=3013; REF=${DEPLOY_REF:-staging}; ORIGIN=https://saleslights-staging.gosaleslights.com ;;
   production) ROOT=/var/www/saleslights;         APP=saleslights-prod;    PORT=3010; CANDIDATE_PORT=3012; REF=${DEPLOY_REF:-main};    ORIGIN=https://saleslights.com ;;
   *) echo INVALID_TIER; exit 2 ;;
 esac

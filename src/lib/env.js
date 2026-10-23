@@ -9,7 +9,7 @@ export const SITE_ENV = process.env.SITE_ENV === 'production' ? 'production' : '
 export const IS_PRODUCTION = SITE_ENV === 'production';
 export const SITE_URL = IS_PRODUCTION
   ? PRODUCTION_ORIGIN
-  : (process.env.NEXT_PUBLIC_SITE_URL || 'https://staging.saleslights.com').replace(/\/$/, '');
+  : (process.env.NEXT_PUBLIC_SITE_URL || 'https://saleslights-staging.gosaleslights.com').replace(/\/$/, '');
 export const CANONICAL_ORIGIN = PRODUCTION_ORIGIN;
 
 export const FORMS_DRY_RUN = !IS_PRODUCTION || process.env.FORMS_DRY_RUN === 'true';
