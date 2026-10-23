@@ -1,16 +1,21 @@
 {
   "name": "saleslights",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "npx serve out",
-    "lint": "next lint"
+    "start": "next start -p ${PORT:-3010}",
+    "lint": "next lint",
+    "verify": "node scripts/verify-routes.mjs"
   },
   "dependencies": {
-    "next": "15.4.6",
-    "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "next": "16.4.3",
+    "nodemailer": "10.2.1",
+    "react": "19.2.9",
+    "react-dom": "19.2.9"
   }
 }
