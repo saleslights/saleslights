@@ -19,7 +19,7 @@ const FAQ = [
 export default function GtmEngine() {
   return (
     <>
-      <section className="page-head">
+      <section className="page-head offer-head">
         <div className="wrap">
           <p className="eyebrow">Our core offer</p>
           <h1>GTM Engine &amp; Sales Professional</h1>

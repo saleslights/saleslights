@@ -11,7 +11,7 @@ export default async function Contact({ searchParams }) {
   const sp = (await searchParams) || {};
   const topic = TOPICS.includes(sp.topic) ? sp.topic : '';
   return (
-    <section className="page-head">
+    <section className="page-head contact-head">
       <div className="wrap split top">
         <div className="copy">
           <p className="eyebrow">Contact</p>

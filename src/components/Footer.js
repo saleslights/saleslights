@@ -12,7 +12,7 @@ export default function Footer() {
           <p className="footer-line">Revenue infrastructure. Built and operated.</p>
           <p className="muted small">New York · Delaware</p>
         </div>
-        <div>
+        <div className="footer-letter">
           <p className="eyebrow">The Saleslights letter</p>
           <p className="muted">Field notes from the AI Lab on revenue systems, selling and what is actually working. No more than twice a month.</p>
           <Subscribe source="footer" compact />
