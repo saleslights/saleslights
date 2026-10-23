@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Mark from './Mark';
+import MobileMenu from './MobileMenu';
 import { NAV } from '../content/site';
 
 function Links() {
@@ -22,10 +23,9 @@ export default function Header() {
           <span className="brand-word">Saleslights</span>
         </Link>
         <nav className="nav-desktop" aria-label="Primary"><Links /></nav>
-        <details className="menu">
-          <summary>Menu</summary>
+        <MobileMenu>
           <nav aria-label="Mobile"><Links /></nav>
-        </details>
+        </MobileMenu>
       </div>
     </header>
   );

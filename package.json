@@ -10,7 +10,8 @@
     "build": "next build",
     "start": "next start -p ${PORT:-3010}",
     "lint": "next lint",
-    "verify": "node scripts/verify-routes.mjs"
+    "verify": "node scripts/verify-routes.mjs",
+    "test:browser": "node scripts/test-mobile-menu.mjs"
   },
   "dependencies": {
     "next": "16.4.3",
