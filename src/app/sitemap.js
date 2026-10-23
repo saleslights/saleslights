@@ -1,24 +1,10 @@
-/* sitemap.xml, generated into ./out at build time.
-
-   The site is ONE document with hash routing — /#founder and the rest are not
-   separate URLs and must not be listed as though they were, or the sitemap
-   promises pages that return the same HTML and the duplicates get discounted.
-   So this lists exactly what exists: the root. */
-
-/* force-static is required by `output: export`: a route handler is dynamic by
-   default, and the export refuses to emit one it cannot resolve at build time.
-   Without this the whole build fails rather than skipping the file. */
-export const dynamic = 'force-static';
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://saleslights.com';
+import { IS_PRODUCTION, absolute } from '../lib/env';
+import { PAGES } from '../content/seo';
+import { POSTS } from '../content/posts';
 
 export default function sitemap() {
-  return [
-    {
-      url: SITE_URL,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 1,
-    },
-  ];
+  if (!IS_PRODUCTION) return [];
+  const pages = Object.keys(PAGES).map((path) => ({ url: absolute(path), changeFrequency: path === '/lab/' ? 'weekly' : 'monthly', priority: path === '/' ? 1 : 0.7 }));
+  const posts = POSTS.map((p) => ({ url: absolute(`/lab/${p.slug}/`), lastModified: p.date, changeFrequency: 'yearly', priority: 0.6 }));
+  return [...pages, ...posts];
 }
