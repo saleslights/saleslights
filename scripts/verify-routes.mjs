@@ -14,6 +14,9 @@ const text = (html) => html.replace(/<script[\s\S]*?<\/script>/g, '').replace(/<
 /* Copy contract: exact owner wording that must appear, and claims the truth canon does not support. */
 const MUST = {
   '/gtm-engine/': ['Saleslights - GTM Engine & Sales Professional', '$5,999–$13,999'],
+  '/training/': ['Sales Training'],
+  '/ai-training/': ['AI Training', 'Security', 'Finance'],
+  '/software-development/': ['Nick Krause', 'forward-deployed engineer', 'full-stack', '$5,999–$13,999', '$18,999', '$29,999', 'per month', 'scope'],
   '/book/': ['$500'],
   '/revenue-infrastructure/': ['$7.5K–$20K', '$50K–$100K+'],
 };

@@ -2,7 +2,8 @@ import { json, limited, originAllowed, readBody, clean, validEmail, persist } fr
 
 export const dynamic = 'force-dynamic';
 
-const TOPICS = new Set(['gtm-engine', 'revenue-infrastructure', 'training', 'lead-data', 'speaking', 'other']);
+import { CONTACT_TOPIC_VALUES } from '../../../content/contact-topics';
+const TOPICS = new Set(CONTACT_TOPIC_VALUES);
 const SIZES = new Set(['', '1–10', '11–50', '51–200', '201–1,000', '1,000+']);
 
 export async function POST(request) {

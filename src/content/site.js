@@ -26,7 +26,9 @@ export const CHECKOUT_URL = IS_PRODUCTION ? LINKS.bookCheckout : LINKS.bookCheck
 export const NAV = [
   { href: '/gtm-engine/', label: 'GTM Engine' },
   { href: '/revenue-infrastructure/', label: 'Revenue Infrastructure' },
-  { href: '/training/', label: 'Training' },
+  { href: '/training/', label: 'Sales Training' },
+  { href: '/ai-training/', label: 'AI Training' },
+  { href: '/software-development/', label: 'Software Development' },
   { href: '/lab/', label: 'AI Lab' },
   { href: '/about/', label: 'About' },
 ];
