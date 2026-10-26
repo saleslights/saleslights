@@ -29,7 +29,7 @@ export const PAGES = {
   },
   '/book/': {
     title: 'Book Time With Nick — one-hour GTM working session ($500)',
-    description: 'Pay $500 and book a one-hour working session with Saleslights founder Nick Krause on go-to-market strategy, revenue infrastructure, sales execution or AI growth systems.',
+    description: 'Request a $500 invoice for a one-hour working session with Saleslights founder Nick Krause on go-to-market strategy, revenue infrastructure, sales execution or AI growth systems.',
     h1: 'Book time with Nick',
   },
   '/about/': {
