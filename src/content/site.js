@@ -8,11 +8,7 @@
 
 export const SITE_NAME = 'Saleslights';
 
-import { IS_PRODUCTION } from '../lib/env';
-
 export const LINKS = {
-  bookCheckout: 'https://buy.stripe.com/3cIdRa8UXcNE6B85GzcZa02',
-  bookCheckoutTest: 'https://buy.stripe.com/test_9B6eVefjlfZQcZw7OHcZa01',
   calendarAfterPayment: 'https://calendly.com/nkrause-tvw8/book-time-with-nick',
   introCall: 'https://calendly.com/nkrause-tvw8/saleslights-nick-30-min',
   linkedin: 'https://www.linkedin.com/in/nicholas-krause',
@@ -20,8 +16,9 @@ export const LINKS = {
   sherpaAcquisition: 'https://www.cmswire.com/the-wire/adrem-systems-corporation-strengthens-its-compliance-and-cybersecurity-portfolio-with-acquisition-of-sherpa/',
 };
 
-/* Live Stripe link only on the production build; staging reviewers get test mode. */
-export const CHECKOUT_URL = IS_PRODUCTION ? LINKS.bookCheckout : LINKS.bookCheckoutTest;
+/* The $500 session is billed through Mercury (Saleslights Inc.), not Stripe:
+   /book/ posts to /api/book, which raises and emails the invoice. The former
+   Stripe products and payment link are archived -- do not reintroduce them. */
 
 export const NAV = [
   { href: '/gtm-engine/', label: 'GTM Engine' },
@@ -42,8 +39,8 @@ export const BOOK = {
   summary:
     'A focused working session with Nick Krause on go-to-market strategy, revenue infrastructure, sales execution or AI-enabled growth systems.',
   steps: [
-    'Pay securely through Stripe.',
-    'You are taken straight to Nick’s calendar to choose a time.',
+    'Request the invoice. Saleslights Inc. emails it to you through Mercury.',
+    'Pay by ACH debit or bank transfer, then pick a time on Nick’s calendar.',
     'Bring the problem. Leave with a point of view and next steps.',
   ],
   goodFor: [

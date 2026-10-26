@@ -1,6 +1,7 @@
 import Closing from '../../components/Closing';
 import JsonLd, { ORG_ID, PERSON_ID } from '../../components/JsonLd';
-import { BOOK, CHECKOUT_URL } from '../../content/site';
+import BookInvoiceForm from '../../components/BookInvoiceForm';
+import { BOOK } from '../../content/site';
 import { pageMeta } from '../../content/seo';
 import { absolute } from '../../lib/env';
 
@@ -19,8 +20,8 @@ export default function Book() {
           <div className="book-card">
             <p className="price">{BOOK.price}<small>/ {BOOK.duration}</small></p>
             <ol className="steps">{BOOK.steps.map((s) => <li key={s}><span>{s}</span></li>)}</ol>
-            <a className="button" href={CHECKOUT_URL} rel="noopener">Pay and choose a time</a>
-            <p className="muted small">Secure checkout by Stripe. After payment you are sent to Nick’s calendar. Card statements may show “VF* SALESLIGHTS”.</p>
+            <BookInvoiceForm />
+            <p className="muted small">Saleslights Inc. sends the invoice through Mercury. Pay by ACH debit or bank transfer, then you get Nick’s calendar link.</p>
           </div>
         </div>
       </section>
