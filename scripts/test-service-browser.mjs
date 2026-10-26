@@ -72,7 +72,8 @@ try {
    check('browser dry-run accepted '+topic,true,await ev("document.querySelector('.form-status').textContent"));await shot(`contact-${topic}-dry-run`);
   }
  }
- await go('/book/');check('booking remains test mode',await ev("!!document.querySelector('a[href^=\"https://buy.stripe.com/test_\"]')"),true);
+ await go('/book/');check('booking uses the Mercury invoice form',await ev("(()=>{const f=document.querySelector('form');return !!f && f.getAttribute('action')==='/api/book';})()"),true);
+ check('no Stripe checkout link remains',await ev("!document.documentElement.outerHTML.includes('buy.stripe.com')"),true);
  check('no runtime/console errors',errors.length===0,errors);
 } finally {
  await writeFile(path.join(out,'browser-report.json'),JSON.stringify({base,health,submitForms,results,errors},null,2));
