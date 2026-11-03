@@ -22,6 +22,7 @@ export const LINKS = {
 
 export const NAV = [
   { href: '/gtm-engine/', label: 'GTM Engine' },
+  { href: '/venture-partnerships/', label: 'Venture Partnerships' },
   { href: '/revenue-infrastructure/', label: 'Revenue Infrastructure' },
   { href: '/training/', label: 'Sales Training' },
   { href: '/ai-training/', label: 'AI Training' },

@@ -1,7 +1,8 @@
 /* Per-route SEO contract. scripts/verify-routes.mjs asserts rendered HTML
    against this table: status, one H1, title, description and canonical. */
 export const PAGES = {
-  '/': { title: 'Saleslights — Revenue infrastructure, built and operated', h1: 'Revenue infrastructure. Built and operated.' },
+  '/': { title: 'Saleslights — Build real businesses. Operate with AI.', description: 'Saleslights is an AI-native venture operator partnering with domain founders to build and operate businesses with a shared AI engine, starting with revenue.', h1: 'Build real businesses. Operate with AI.' },
+  '/venture-partnerships/': { title: 'Venture Partnerships | Saleslights', description: 'For domain founders building businesses where trust, expertise and customer relationships matter. Saleslights combines company building, hands-on operation and a shared AI operating engine.', h1: 'Great founders. Domain expertise. One shared operating engine.' },
   '/gtm-engine/': {
     title: 'GTM Engine & Sales Professional — managed GTM with a rep in market',
     description: 'Saleslights runs your full GTM engine and puts a dedicated U.S.-based sales professional in market alongside founder Nick Krause. $5,999–$13,999 per month by company size.',
