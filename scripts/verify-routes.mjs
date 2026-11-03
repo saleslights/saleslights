@@ -13,6 +13,8 @@ const text = (html) => html.replace(/<script[\s\S]*?<\/script>/g, '').replace(/<
 
 /* Copy contract: exact owner wording that must appear, and claims the truth canon does not support. */
 const MUST = {
+  '/venture-partnerships/': ['AI-native venture operator', 'negotiated equity partnerships', 'separate company data and permissions', 'InfernoBlue'],
+  '/': ['SALESLIGHTS · AI-NATIVE VENTURE OPERATOR', 'AI executes defined work. People own the decisions.', 'Venture partnerships'],
   '/gtm-engine/': ['Saleslights - GTM Engine & Sales Professional', '$5,999–$13,999'],
   '/training/': ['Sales Training'],
   '/ai-training/': ['AI Training', 'Security', 'Finance'],

@@ -8,7 +8,7 @@ import path from 'node:path';
 const BASE = process.argv[2] || 'http://127.0.0.1:3910';
 const OUT = process.argv[3] || 'qa';
 const CHROME = process.env.CHROME || path.join(homedir(), '.cache/ms-playwright/chromium-1248/chrome-linux64/chrome');
-const ROUTES = ['/', '/gtm-engine/', '/revenue-infrastructure/', '/training/', '/book/', '/about/', '/lab/', '/lab/what-is-revenue-infrastructure/', '/contact/'];
+const ROUTES = ['/', '/venture-partnerships/', '/gtm-engine/', '/revenue-infrastructure/', '/training/', '/book/', '/about/', '/lab/', '/lab/what-is-revenue-infrastructure/', '/contact/'];
 const VIEWS = [['mobile', 390, 844, 2, true], ['desktop', 1440, 900, 1, false]];
 mkdirSync(OUT, { recursive: true });
 

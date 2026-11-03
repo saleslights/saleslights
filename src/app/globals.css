@@ -339,3 +339,18 @@ button:disabled { cursor: wait; opacity: .7; }
   .footer-base > span:first-child { flex-basis: 100%; }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; } }
+
+/* Venture operator repositioning: keep the existing editorial vocabulary. */
+.human-boundary { margin-top: 18px; font-size: 15px; color: var(--muted); }
+.venture-head { padding: clamp(64px, 8vw, 112px) 0; }
+.venture-head h1 { max-width: 18ch; margin-top: 28px; font-size: clamp(44px, 7vw, 92px); }
+.venture-head .lede { margin-top: 30px; }
+.venture-alignment { max-width: 58ch; margin-top: 22px; color: var(--muted); }
+.venture-loop { display: grid; margin-top: 52px; border-top: 1px solid var(--field-line); list-style: none; padding: 0; }
+.venture-loop li { display: grid; grid-template-columns: 36px 1fr; gap: 18px; align-items: baseline; padding: 22px 0; border-bottom: 1px solid var(--line); font-size: clamp(20px, 2.2vw, 28px); }
+.venture-loop .n { color: var(--muted); font-size: 12px; }
+.venture-portfolio { border-top: 1px solid var(--field-line); }
+.venture-portfolio article { padding: 26px 0; border-bottom: 1px solid var(--line); }
+.venture-portfolio h3 { font-size: 25px; }
+.venture-portfolio p { margin-top: 10px; max-width: 52ch; }
+@media (min-width: 1080px) { .venture-loop { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 28px; } .venture-loop li { display: block; padding: 22px 0; } .venture-loop .n { display: block; margin-bottom: 26px; } }
