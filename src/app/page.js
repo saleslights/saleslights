@@ -17,12 +17,13 @@ export default function Home() {
       <section className="hero" id="home">
         <div className="wrap hero-grid">
           <div className="hero-title">
-            <p className="eyebrow">Saleslights · New York</p>
-            <h1><span className="line">Revenue infrastructure.</span>{' '}<span className="line">Built and operated<span className="lamp-stop" aria-hidden="true"></span><span className="sr-only">.</span></span></h1>
+            <p className="eyebrow">SALESLIGHTS · AI-NATIVE VENTURE OPERATOR</p>
+            <h1><span className="line">Build real businesses.</span>{' '}<span className="line">Operate with AI.</span></h1>
           </div>
           <div className="hero-art-slot" aria-hidden="true"><LampStudy /></div>
           <div className="hero-copy">
-            <p className="lede">We build the system that finds, reaches and wins your buyers — then run it with you, with a real sales professional in market.</p>
+            <p className="lede">We partner with domain founders to build and operate businesses with a shared AI engine—starting with revenue, expanding into the work that keeps a company moving.</p>
+            <p className="human-boundary">AI executes defined work. People own the decisions.</p>
             <div className="actions">
               <Link className="button" href="/book/">{BOOK.cta}</Link>
               <Link className="text-link" href="/gtm-engine/">See the GTM Engine</Link>
@@ -34,9 +35,9 @@ export default function Home() {
       <section className="section tight">
         <div className="wrap">
           <div className="entry-index">
-            <p className="eyebrow">Three ways in</p>
+            <p className="eyebrow">Two ways to work together</p>
             <div className="ladder">
-              {LADDER.map(([t, p, href], i) => (
+              {[['GTM Engine', 'Revenue infrastructure, built and operated for your business.', '/gtm-engine/'], ['Venture partnerships', 'For domain founders building businesses where trust, expertise and customer relationships matter.', '/venture-partnerships/']].map(([t, p, href], i) => (
                 <Link key={href} href={href}>
                   <span className="n">0{i + 1}</span><span className="t">{t}</span><span className="p">{p}</span>
                 </Link>
@@ -49,9 +50,9 @@ export default function Home() {
       <section className="section white" id="services">
         <div className="wrap split">
           <div className="copy">
-            <p className="eyebrow">The Master Revenue Engine</p>
-            <h2>One brain. Every revenue function connected to it.</h2>
-            <p className="lede">Signals, prospecting, campaigns, search, analytics, content and field work run as one system — not ten tools and a spreadsheet.</p>
+            <p className="eyebrow">The operating thesis</p>
+            <h2>Great founders. Domain expertise. One shared operating engine.</h2>
+            <p className="lede">Saleslights combines company building, hands-on operation and a shared AI operating engine. We begin with go-to-market: finding the market, building demand, coordinating execution and learning from results. Our ambition is to help small teams operate substantial businesses—not just complete more tasks.</p>
             <p><Link className="text-link" href="/revenue-infrastructure/">See the architecture and pricing</Link></p>
           </div>
           <EngineDiagram />
@@ -80,9 +81,9 @@ export default function Home() {
       <section className="section white home-founder" id="founder">
         <div className="wrap split top">
           <div className="copy">
-            <p className="eyebrow">Founder-led</p>
-            <h2>Senior judgment on every account.</h2>
-            <p className="lede">Nick Krause has carried quota, worked in senior sales engineering and founded Sherpa, a compliance company whose assets AdRem Systems acquired. He is in the work, not above it.</p>
+            <p className="eyebrow">Founder</p>
+            <h2>How much of a real business can AI responsibly operate?</h2>
+            <p className="lede">Nick Krause is the founder of Saleslights, bringing experience in enterprise technology sales, government-sector research and building Sherpa to a new question: how much of a real business can AI responsibly operate?</p>
             <p><Link className="text-link" href="/about/">About Nick and the team</Link></p>
           </div>
           <div>

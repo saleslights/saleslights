@@ -35,7 +35,7 @@ export default function About() {
             <h2>A seller who builds the system.</h2>
           </div>
           <div className="copy">
-            <p className="lede">Nick helps companies move their product forward and make the impressions that generate revenue.</p>
+            <p className="lede">Nick Krause is the founder of Saleslights, bringing experience in enterprise technology sales, government-sector research and building Sherpa to a new question: how much of a real business can AI responsibly operate?</p>
             <p>His career runs through senior sales engineering and quota-carrying roles — leading opportunity meetings with deep technical expertise while account teams managed the stakeholders. He founded Sherpa to help government contractors navigate cybersecurity compliance; a February 2024 announcement reported AdRem Systems’ acquisition of Sherpa assets and named Nick as Sherpa’s former CEO and founder of Saleslights.</p>
             <p>Today he leads Saleslights from New York: GTM strategy and sales engineering for clients, in-market representation, and the agentic engineering behind the Saleslights platform, which also runs go-to-market for portfolio companies including FindUrLawyer, VideoFunker and InfernoBlue.</p>
             <p>He works in English, Spanish and Portuguese.</p>
